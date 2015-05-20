@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		611A13671B0D297400A9A4B1 /* LevelBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 611A13651B0D297400A9A4B1 /* LevelBuilder.cpp */; };
 		A90FEDCD1B0C0EE000CAB320 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A90FEDCC1B0C0EE000CAB320 /* main.cpp */; };
-		A90FEDD61B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FEDD31B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib */; };
-		A90FEDD71B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FEDD41B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib */; };
-		A90FEDD81B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FEDD51B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib */; };
 		A90FEDDB1B0C0F5000CAB320 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A90FEDDA1B0C0F5000CAB320 /* Application.cpp */; };
+		A90FEDDE1B0C385E00CAB320 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A90FEDDC1B0C385E00CAB320 /* Tile.cpp */; };
+		A90FEDE21B0C3E0100CAB320 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A90FEDE01B0C3E0100CAB320 /* Scene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,13 +27,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		611A13651B0D297400A9A4B1 /* LevelBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LevelBuilder.cpp; sourceTree = "<group>"; };
+		611A13661B0D297400A9A4B1 /* LevelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelBuilder.h; sourceTree = "<group>"; };
 		A90FEDC91B0C0EE000CAB320 /* tiley */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tiley; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90FEDCC1B0C0EE000CAB320 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		A90FEDD31B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.2.0.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.2/lib/libsfml-graphics.2.2.0.dylib"; sourceTree = "<group>"; };
-		A90FEDD41B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.2.0.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.2/lib/libsfml-system.2.2.0.dylib"; sourceTree = "<group>"; };
-		A90FEDD51B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.2.0.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.2/lib/libsfml-window.2.2.0.dylib"; sourceTree = "<group>"; };
 		A90FEDD91B0C0F5000CAB320 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		A90FEDDA1B0C0F5000CAB320 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		A90FEDDC1B0C385E00CAB320 /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
+		A90FEDDD1B0C385E00CAB320 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		A90FEDDF1B0C3C0000CAB320 /* Vector2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2D.h; sourceTree = "<group>"; };
+		A90FEDE01B0C3E0100CAB320 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		A90FEDE11B0C3E0100CAB320 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,9 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A90FEDD61B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib in Frameworks */,
-				A90FEDD71B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib in Frameworks */,
-				A90FEDD81B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,9 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				A90FEDCB1B0C0EE000CAB320 /* tiley */,
-				A90FEDD31B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib */,
-				A90FEDD41B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib */,
-				A90FEDD51B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib */,
 				A90FEDCA1B0C0EE000CAB320 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +73,13 @@
 				A90FEDCC1B0C0EE000CAB320 /* main.cpp */,
 				A90FEDD91B0C0F5000CAB320 /* Application.h */,
 				A90FEDDA1B0C0F5000CAB320 /* Application.cpp */,
+				611A13661B0D297400A9A4B1 /* LevelBuilder.h */,
+				611A13651B0D297400A9A4B1 /* LevelBuilder.cpp */,
+				A90FEDE11B0C3E0100CAB320 /* Scene.h */,
+				A90FEDE01B0C3E0100CAB320 /* Scene.cpp */,
+				A90FEDDD1B0C385E00CAB320 /* Tile.h */,
+				A90FEDDC1B0C385E00CAB320 /* Tile.cpp */,
+				A90FEDDF1B0C3C0000CAB320 /* Vector2D.h */,
 			);
 			path = tiley;
 			sourceTree = "<group>";
@@ -135,8 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90FEDE21B0C3E0100CAB320 /* Scene.cpp in Sources */,
+				A90FEDDE1B0C385E00CAB320 /* Tile.cpp in Sources */,
 				A90FEDDB1B0C0F5000CAB320 /* Application.cpp in Sources */,
 				A90FEDCD1B0C0EE000CAB320 /* main.cpp in Sources */,
+				611A13671B0D297400A9A4B1 /* LevelBuilder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +155,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -182,6 +190,7 @@
 					"$(inherited)",
 					/usr/local/include,
 				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -193,7 +202,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -222,6 +231,7 @@
 					"$(inherited)",
 					/usr/local/include,
 				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -231,9 +241,11 @@
 		A90FEDD11B0C0EE000CAB320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/sfml/2.2/lib,
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lsfml-graphics",
+					"-lsfml-system",
+					"-lsfml-window",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -242,9 +254,11 @@
 		A90FEDD21B0C0EE000CAB320 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/sfml/2.2/lib,
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lsfml-graphics",
+					"-lsfml-system",
+					"-lsfml-window",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -269,6 +283,7 @@
 				A90FEDD21B0C0EE000CAB320 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

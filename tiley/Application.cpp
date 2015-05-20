@@ -2,11 +2,24 @@
 
 #include "Application.h"
 
+#include <memory>
+
+#include "LevelBuilder.h"
+
 
 namespace mcw {
 
+const auto Application::kBackgroundColor = sf::Color{63, 127, 255, 255};
+
 Application::Application() {
-    _window.create(sf::VideoMode(800, 600), "tiley");
+    _window.create(sf::VideoMode(kWidth, kHeight), "tiley");
+    _window.setFramerateLimit(60);
+    createScene();
+}
+
+void Application::createScene() {
+    LevelBuilder builder(_scene);
+    builder.buildLevel1();
 }
 
 void Application::run() {
@@ -26,7 +39,8 @@ void Application::handleEvent(const sf::Event& event) {
 }
 
 void Application::draw() {
-    _window.clear();
+    _window.clear(kBackgroundColor);
+    _window.draw(_scene);
     _window.display();
 }
 
