@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A90FEDCD1B0C0EE000CAB320 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A90FEDCC1B0C0EE000CAB320 /* main.cpp */; };
+		A90FEDD61B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FEDD31B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib */; };
+		A90FEDD71B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FEDD41B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib */; };
+		A90FEDD81B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FEDD51B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib */; };
+		A90FEDDB1B0C0F5000CAB320 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A90FEDDA1B0C0F5000CAB320 /* Application.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,11 @@
 /* Begin PBXFileReference section */
 		A90FEDC91B0C0EE000CAB320 /* tiley */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tiley; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90FEDCC1B0C0EE000CAB320 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A90FEDD31B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.2.0.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.2/lib/libsfml-graphics.2.2.0.dylib"; sourceTree = "<group>"; };
+		A90FEDD41B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.2.0.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.2/lib/libsfml-system.2.2.0.dylib"; sourceTree = "<group>"; };
+		A90FEDD51B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.2.0.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.2/lib/libsfml-window.2.2.0.dylib"; sourceTree = "<group>"; };
+		A90FEDD91B0C0F5000CAB320 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		A90FEDDA1B0C0F5000CAB320 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90FEDD61B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib in Frameworks */,
+				A90FEDD71B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib in Frameworks */,
+				A90FEDD81B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				A90FEDCB1B0C0EE000CAB320 /* tiley */,
+				A90FEDD31B0C0F0F00CAB320 /* libsfml-graphics.2.2.0.dylib */,
+				A90FEDD41B0C0F0F00CAB320 /* libsfml-system.2.2.0.dylib */,
+				A90FEDD51B0C0F0F00CAB320 /* libsfml-window.2.2.0.dylib */,
 				A90FEDCA1B0C0EE000CAB320 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				A90FEDCC1B0C0EE000CAB320 /* main.cpp */,
+				A90FEDD91B0C0F5000CAB320 /* Application.h */,
+				A90FEDDA1B0C0F5000CAB320 /* Application.cpp */,
 			);
 			path = tiley;
 			sourceTree = "<group>";
@@ -118,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90FEDDB1B0C0F5000CAB320 /* Application.cpp in Sources */,
 				A90FEDCD1B0C0EE000CAB320 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +178,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -196,6 +218,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -205,6 +231,10 @@
 		A90FEDD11B0C0EE000CAB320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sfml/2.2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +242,10 @@
 		A90FEDD21B0C0EE000CAB320 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sfml/2.2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
