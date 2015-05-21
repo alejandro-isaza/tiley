@@ -33,6 +33,9 @@ void LevelBuilder::buildFromTextFile(const std::string& filePath) {
     while (std::getline(is, line)) {
         int col = 0;
         for (auto c : line) {
+            if (c == 'X')
+                _scene.avatar().setLocation(Vector2D(col * kTileSize, row * kTileSize));
+
             auto texture = textureMap[c];
             if (texture)
                 addTile(col, row, std::move(texture));

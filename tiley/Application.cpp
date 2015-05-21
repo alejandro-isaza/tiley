@@ -29,6 +29,7 @@ void Application::run() {
             handleEvent(event);
         }
 
+        _scene.update();
         draw();
     }
 }
