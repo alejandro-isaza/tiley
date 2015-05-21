@@ -19,7 +19,7 @@ Application::Application() {
 
 void Application::createScene() {
     LevelBuilder builder(_scene);
-    builder.buildLevel1();
+    builder.buildFromTextFile("data/level0.txt");
 }
 
 void Application::run() {

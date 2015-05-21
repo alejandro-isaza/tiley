@@ -16,7 +16,7 @@ public:
 
 public:
     explicit LevelBuilder(Scene& scene);
-    void buildLevel1();
+    void buildFromTextFile(const std::string& filePath);
 
 protected:
     /// Add a tile at the given tile column and row with the given texture

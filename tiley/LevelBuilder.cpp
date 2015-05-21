@@ -2,6 +2,10 @@
 
 #include "LevelBuilder.h"
 
+#include <iostream>
+#include <fstream>
+
+
 namespace mcw {
 
 LevelBuilder::LevelBuilder(Scene& scene) : _scene(scene) {
@@ -14,27 +18,33 @@ LevelBuilder::LevelBuilder(Scene& scene) : _scene(scene) {
         throw std::runtime_error("Failed to load water texture");
 }
 
-void LevelBuilder::buildLevel1() {
-    static const auto kLevelRows = 12;
+void LevelBuilder::buildFromTextFile(const std::string& filePath) {
+    // Build texture map
+    std::map<char, std::shared_ptr<sf::Texture>> textureMap;
+    textureMap.insert({'G', _groundTexture});
+    textureMap.insert({'W', _waterTexture});
 
-    auto i = 0;
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _waterTexture);
-    addTile(i++, kLevelRows - 1, _waterTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
-    addTile(i++, kLevelRows - 1, _groundTexture);
+    // Open file for reading
+    std::ifstream is(filePath.c_str());
+    std::string line;
+
+    // Read by lines and match characters to textures
+    int row = 0;
+    while (std::getline(is, line)) {
+        int col = 0;
+        for (auto c : line) {
+            auto texture = textureMap[c];
+            if (texture)
+                addTile(col, row, std::move(texture));
+            col += 1;
+        }
+        row += 1;
+    }
 }
 
-void LevelBuilder::addTile(int x, int y, std::shared_ptr<sf::Texture> texture) {
+void LevelBuilder::addTile(int col, int row, std::shared_ptr<sf::Texture> texture) {
     auto tile = std::make_unique<Tile>(std::move(texture));
-    tile->setLocation(Vector2D(x * kTileSize, y * kTileSize));
+    tile->setLocation(Vector2D(col * kTileSize, row * kTileSize));
     _scene.addTile(std::move(tile));
 }
 
