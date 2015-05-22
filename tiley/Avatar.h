@@ -2,6 +2,7 @@
 
 #pragma once
 #include <chrono>
+#include <memory>
 #include <SFML/Graphics.hpp>
 #include "Vector2D.h"
 

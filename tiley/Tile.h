@@ -2,6 +2,7 @@
 
 #pragma once
 #include <bitset>
+#include <memory>
 #include <string>
 
 #include <SFML/Graphics.hpp>
